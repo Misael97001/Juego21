@@ -42,5 +42,9 @@ public class Dealer {
             c.imprimir();
         }
     }
+    
+    public int generarAleatorio(int maximo) {
+        return (int)(Math.random() * (maximo + 1));
+    }
 
 }
