@@ -46,5 +46,16 @@ public class Dealer {
     public int generarAleatorio(int maximo) {
         return (int)(Math.random() * (maximo + 1));
     }
+    
+    public Carta entregarCarta() {
+
+        int pos = generarAleatorio(naipe.size() - 1);
+
+        Carta c = naipe.get(pos);
+
+        naipe.remove(pos);
+
+        return c;
+    }
 
 }
