@@ -44,6 +44,50 @@ public class Juego21 {
 
         for (Jugador j : jugadores) {
             repartirCarta(j);
+            calcularTotal();
         }
+    }
+    public void calcularTotal() {
+
+        for (Jugador j : jugadores) {
+
+            int suma = 0;
+
+            for (Carta c : j.getCartas()) {
+                suma += c.getValorJuego();
+            }
+
+            j.setPuntajeCartas(suma);
+        }
+    }
+    
+    public ArrayList<Jugador> validarGanador() {
+
+        ArrayList<Jugador> ganadores = new ArrayList<Jugador>();
+
+        for (Jugador j : jugadores) {
+            if (j.getPuntajeCartas() == 21) {
+                ganadores.add(j);
+            }
+        }
+
+        return ganadores;
+    }
+    public ArrayList<Jugador> jugar() {
+
+        ArrayList<Jugador> ganadores = new ArrayList<Jugador>();
+
+        for (int i = 0; i < 3; i++) {
+
+            repartirRonda();
+
+            ganadores = validarGanador();
+
+            if (ganadores.size() > 0) {
+                break;
+            }
+        }
+
+        return ganadores;
     }
  }
