@@ -32,7 +32,7 @@ public class TestJuego21 {
 		 	}
 */
 	// =========================
-	// 🔹 PRIMERA PRUEBA
+	// PRIMERA PRUEBA
 	// =========================
 	System.out.println("=== PRIMERA PRUEBA ===");
 
@@ -58,7 +58,7 @@ public class TestJuego21 {
 	}
 
 	// =========================
-	// 🔹 SEGUNDA PRUEBA
+	// SEGUNDA PRUEBA
 	// =========================
 	System.out.println("\n=== SEGUNDA PRUEBA (10 INTENTOS) ===");
 
